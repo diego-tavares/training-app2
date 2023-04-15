@@ -1,0 +1,48 @@
+body {
+	background-color: var(--main-color);
+	color: var();
+	font-family: Arial, sans-serif;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+table {
+	margin: 0 auto;
+	border-collapse: collapse;
+	width: 70%;
+	max-width: 800px;
+}
+
+thead {
+	background-color: var(--header-bg-color);
+	color: var(--header-text-color);
+}
+
+thead th {
+	padding: 10px;
+	font-weight: bold;
+	text-align: left;
+}
+
+tbody tr:nth-child(even) {
+	background-color: var(--even-row-bg-color);
+}
+
+tbody tr:nth-child(odd) {
+	background-color: var(--odd-row-bg-color);
+}
+
+tbody td {
+	padding: 10px;
+	text-align: left;
+	border-bottom: 1px solid var(--border-color);
+}
+
+tbody td[contenteditable=true]:hover {
+	background-color: var(--editable-cell-bg-color);
+	color: var(--editable-cell-text-color);
+}
