@@ -32,3 +32,17 @@ function setTheme(theme) {
         }
         }
 
+
+const addRowBtn = document.getElementById('add-row-btn');
+const tableBody = document.querySelector('table tbody');
+
+addRowBtn.addEventListener('click', () => {
+  const newRow = document.createElement('tr');
+  newRow.innerHTML = `
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+    <td contenteditable="true"></td>
+  `;
+  tableBody.appendChild(newRow);
+});
