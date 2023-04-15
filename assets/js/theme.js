@@ -31,3 +31,4 @@ function setTheme(theme) {
         document.documentElement.style.setProperty('--editable-cell-text-color', '#000000');
         }
         }
+
