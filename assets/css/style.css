@@ -46,3 +46,4 @@ tbody td[contenteditable=true]:hover {
 	background-color: var(--editable-cell-bg-color);
 	color: var(--editable-cell-text-color);
 }
+
