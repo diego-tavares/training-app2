@@ -32,17 +32,33 @@ function setTheme(theme) {
         }
         }
 
-
-const addRowBtn = document.getElementById('add-row-btn');
-const tableBody = document.querySelector('table tbody');
-
-addRowBtn.addEventListener('click', () => {
-  const newRow = document.createElement('tr');
-  newRow.innerHTML = `
-    <td contenteditable="true"></td>
-    <td contenteditable="true"></td>
-    <td contenteditable="true"></td>
-    <td contenteditable="true"></td>
-  `;
-  tableBody.appendChild(newRow);
-});
+        const addRowBtn = document.getElementById('add-row-btn');
+        const tableBody = document.querySelector('table tbody');
+        
+        addRowBtn.addEventListener('click', () => {
+          const newRow = document.createElement('tr');
+          newRow.innerHTML = `
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td><button class="delete-row-btn">Excluir linha</button></td>
+          `;
+          tableBody.appendChild(newRow);
+        
+          const deleteRowBtn = newRow.querySelector('.delete-row-btn');
+          deleteRowBtn.addEventListener('click', (e) => {
+            const row = e.target.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+          });
+        });
+        
+        const deleteRowBtns = document.querySelectorAll('.delete-row-btn');
+        
+        deleteRowBtns.forEach((btn) => {
+          btn.addEventListener('click', (e) => {
+            const row = e.target.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+          });
+        });
+        

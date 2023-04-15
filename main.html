@@ -11,7 +11,6 @@
 	<button onclick="setTheme('blue')">Azul</button>
 	<button onclick="setTheme('green')">Verde</button>
 	<button onclick="setTheme('red')">Vermelho</button>
-
 	<table>
 		<thead>
 		  <tr>
@@ -19,6 +18,7 @@
 			<th>Séries</th>
 			<th>Repetições</th>
 			<th>Peso</th>
+			<th>Ações</th>
 		  </tr>
 		</thead>
 		<tbody>
@@ -27,22 +27,27 @@
 			<td contenteditable="true">3</td>
 			<td contenteditable="true">8-12</td>
 			<td contenteditable="true">50 kg</td>
+			<td><button class="delete-row-btn">Excluir linha</button></td>
 		  </tr>
 		  <tr>
 			<td contenteditable="true">Puxada frontal</td>
 			<td contenteditable="true">3</td>
 			<td contenteditable="true">8-12</td>
 			<td contenteditable="true">40 kg</td>
+			<td><button class="delete-row-btn">Excluir linha</button></td>
 		  </tr>
 		  <tr>
 			<td contenteditable="true">Desenvolvimento com halteres</td>
 			<td contenteditable="true">3</td>
 			<td contenteditable="true">8-12</td>
 			<td contenteditable="true">20 kg</td>
+			<td><button class="delete-row-btn">Excluir linha</button></td>
 		  </tr>
 		</tbody>
 	  </table>
+	  
 	  <button id="add-row-btn">Adicionar linha</button>
+
 	  
 
 	<script src="assets/js/theme.js"></script>
